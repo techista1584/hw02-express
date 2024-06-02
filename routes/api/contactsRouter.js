@@ -1,83 +1,42 @@
 import express from "express";
-import { contactValidation } from "../../validations/validation.js";
-import { httpError } from "../../helpers/httpError.js";
+import { ctrlWrapper } from "../../helpers/ctrlWrapper.js";
+// prettier-ignore
+import { addContact, deleteContactById, getAllContacts, getContactById, updateContactById, updateStatusContact } from "../../controllers/contactsControllers.js";
 
 const router = express.Router();
 
-router.get("/", async (_req, res, next) => {
-  try {
-    const result = await listContacts();
-    res.json(result);
-  } catch (error) {
-    next(error);
-  }
-});
+/* GET: // http://localhost:3000/api/contacts */
+router.get("/", ctrlWrapper(getAllContacts));
 
-router.get("/:contactId", async (req, res, next) => {
-  try {
-    const { contactId } = req.params;
-    const result = await getContactById(contactId);
+/* GET: // http://localhost:3000/api/contacts/:contactId */
+router.get("/:contactId", ctrlWrapper(getContactById));
 
-    if (!result) {
-      throw httpError(404);
-    }
+/* POST: // http://localhost:3000/api/contacts/ 
+{
+    "name": "Ruby Mateo",
+    "email": "rubymateo@example.com",
+    "phone": "(639) 898-1622"
+} 
+*/
+router.post("/", ctrlWrapper(addContact));
 
-    res.json(result);
-  } catch (error) {
-    next(error);
-  }
-});
+/* DELETE: // http://localhost:3000/api/contacts/:contactId */
+router.delete("/:contactId", ctrlWrapper(deleteContactById));
 
-router.post("/", async (req, res, next) => {
-  try {
-    // Preventing lack of necessary data
-    const { error } = contactValidation.validate(req.body);
-    if (error) {
-      throw httpError(400, "missing required name field");
-    }
+/* PUT: // http://localhost:3000/api/contacts/:contactId 
+{
+    "name": "Joanna Shaw",
+    "email": "joannashaw@example.com",
+    "phone": "(639) 777-8819"
+} 
+*/
+router.put("/:contactId", ctrlWrapper(updateContactById));
 
-    const result = await addContact(req.body);
-    res.status(201).json(result);
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.delete("/:contactId", async (req, res, next) => {
-  try {
-    const { contactId } = req.params;
-    const result = await removeContact(contactId);
-
-    if (!result) {
-      throw httpError(404);
-    }
-
-    res.json({
-      message: "Contact deleted",
-    });
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.put("/:contactId", async (req, res, next) => {
-  try {
-    const { error } = contactValidation.validate(req.body);
-    if (error) {
-      throw httpError(400, "missing fields");
-    }
-
-    const { contactId } = req.params;
-    const result = await updateContact(contactId, req.body);
-
-    if (!result) {
-      throw httpError(404);
-    }
-
-    res.json(result);
-  } catch (error) {
-    next(error);
-  }
-});
+/* PATCH: // http://localhost:3000/api/contacts/:contactId/favorite
+{
+    "favorite": true,
+}
+*/
+router.patch("/:contactId/favorite", ctrlWrapper(updateStatusContact));
 
 export { router };
