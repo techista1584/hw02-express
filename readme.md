@@ -20,5 +20,8 @@
 <p>Updated status action</p>
 <img src="images\updateStatusContact.jpg" alt="update contact status image">
 
+<p>Validate missing favorite during update</p>
+<img src="images\missingFavorite.JPG" alt="favorite validation image">
+
 <p>Updated contact database</p>
 <img src="images\updatedMongoDB.JPG" alt="update contact database image">
