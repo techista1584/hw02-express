@@ -1,6 +1,4 @@
 import express from "express";
-// prettier-ignore
-import {listContacts, getContactById, removeContact, addContact, updateContact} from "../../models/contacts.js";
 import { contactValidation } from "../../validations/validation.js";
 import { httpError } from "../../helpers/httpError.js";
 
