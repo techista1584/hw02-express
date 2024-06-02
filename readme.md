@@ -3,7 +3,7 @@
 <img src="images\getAllContacts.JPG" alt="list image">
 
 <p>Get contact ID action action</p>
-<img src="images\getContactByID.JPG"  alt="contact item image">
+<img src="images\getContactById.JPG"  alt="contact item image">
 
 <p>add a contact action</p>
 <img src="images\addContact.JPG" alt="new contact image">
@@ -18,7 +18,7 @@
 <img src="images\updateContactValidation.JPG" alt="update contact validation image">
 
 <p>Updated status action</p>
-<img src="images\updateStatus.JPG" alt="update contact status image">
+<img src="images\updateStatusContact.JPG" alt="update contact status image">
 
 <p>Updated contact database</p>
 <img src="images\updatedMongoDB.JPG" alt="update contact database image">
