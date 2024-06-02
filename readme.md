@@ -1,14 +1,24 @@
-## GoIT Node.js Course Template Homework
+# Test Images
+<p>Get contact list action</p>
+<img src="images\getAllContacts.JPG" alt="list image">
 
-Please fork this repository to complete your homework assignments (2-6).
-Forking will create a repository on your http://github.com account.
+<p>Get contact ID action action</p>
+<img src="images\getContactByID.JPG"  alt="contact item image">
 
-## Expalanation Recording to hanle homeworks in the Node.js Block
-[Watch the video](https://www.loom.com/share/007c97d271604e02ae61adbb5b69edd3)
+<p>add a contact action</p>
+<img src="images\addContact.JPG" alt="new contact image">
 
-### Commands:
+<p>Validate added contact</p>
+<img src="images\addContactValidation.JPG" alt="validated contact image">
 
-- `npm start` &mdash; starts the server in production mode.
-- `npm run start:dev` &mdash; starts the server in development mode.
-- `npm run lint` &mdash; runs eslint to check the code. Make sure to execute this before each PR and fix all linting errors.
-- `npm lint:fix` &mdash; same as the previous command but fixes simple linting errors automatically.
+<p>Update contact action</p>
+<img src="images\updateContact.JPG" alt=" updated contact image">
+
+<p>Validate Updated contact action</p>
+<img src="images\updateContactValidation.JPG" alt="update contact validation image">
+
+<p>Updated status action</p>
+<img src="images\updateStatus.JPG" alt="update contact status image">
+
+<p>Updated contact database</p>
+<img src="images\updatedMongoDB.JPG" alt="update contact database image">
