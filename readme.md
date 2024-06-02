@@ -18,7 +18,7 @@
 <img src="images\updateContactValidation.JPG" alt="update contact validation image">
 
 <p>Updated status action</p>
-<img src="images\updateStatusContact.JPG" alt="update contact status image">
+<img src="images\updateStatusContact.jpg" alt="update contact status image">
 
 <p>Updated contact database</p>
 <img src="images\updatedMongoDB.JPG" alt="update contact database image">
