@@ -35,3 +35,6 @@
 
 <p>update user test</p>
 <img src="images\user_PATCH.JPG" alt="patch test image">
+
+<p>updated user database</p>
+<img src="images\db_user.JPG" alt="updated user database image">
