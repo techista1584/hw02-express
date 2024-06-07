@@ -13,6 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/contacts', contactsRouter);
+// http:localhost:3000/api/users
 app.use("/api/users", usersRouter);
 
 app.use((_req, res) => {
