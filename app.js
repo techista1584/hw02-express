@@ -12,13 +12,16 @@ app.use(logger(formatsLogger))
 app.use(cors())
 app.use(express.json())
 
+// tells Express to serve static files from the public directory
+// open http://localhost:3000/avatars/sk.png on browser
+app.use(express.static("public"));
+
 app.use('/api/contacts', contactsRouter);
-// http:localhost:3000/api/users
 app.use("/api/users", usersRouter);
 
 app.use((_req, res) => {
   res.status(404).json({ message: 'Not found' })
-})
+});
 
 app.use((err, _req, res, _next) => {
   const { status = 500, message = "Server error" } = err;
