@@ -7,7 +7,7 @@
 <img src="images\login_withAvatarURL.JPG" alt="login with avatar test image">
 
 <p>patch avatar test</p>
-<img src="iimages\patch_AvatarURL.JPG" alt="patch avatar test image">
+<img src="images\patch_AvatarURL.JPG" alt="patch avatar test image">
 
 <p>updated database</p>
 <img src="images\mongoDB.JPG" alt="database image">
