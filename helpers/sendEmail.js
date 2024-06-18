@@ -12,6 +12,9 @@ const nodemailerConfig = {
     user: GMAIL_EMAIL,
     pass: GMAIL_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false // Add this line here
+  }
 };
 
 const transport = nodemailer.createTransport(nodemailerConfig);
