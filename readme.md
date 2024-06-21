@@ -3,6 +3,12 @@
 <p>verification email test image</p>
 <img src="images\verification_email.JPG" alt="verification email test image">
 
+<p>email verification image</p>
+<img src="images\successful email verification.JPG" alt="docker terminal image">
+
+<p>clicking link again</p>
+<img src="images\status404.JPG" alt="status 404">
+
 <p>updated mongo db test image</p>
 <img src="images\updated_mongodb.JPG" alt="updated mongo db test image">
 
